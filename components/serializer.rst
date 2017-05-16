@@ -51,7 +51,7 @@ which encoders and normalizer are going to be available::
     use Symfony\Component\Serializer\Encoder\JsonEncoder;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-    $encoders = array(new XmlEncoder(), new JsonEncoder());
+    $encoders = array('xml' => new XmlEncoder(), 'json' => new JsonEncoder());
     $normalizers = array(new ObjectNormalizer());
 
     $serializer = new Serializer($normalizers, $encoders);
